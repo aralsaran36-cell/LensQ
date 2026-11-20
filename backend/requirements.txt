@@ -1,0 +1,20 @@
+# App
+fastapi
+uvicorn[standard]
+python-multipart
+pydantic-settings
+Pillow
+pillow-heif
+httpx
+
+# Tests
+pytest
+
+# Real model (skipped automatically on Intel Mac, where torch >= 2.6 does not exist)
+transformers>=5.20.2; sys_platform != "darwin" or platform_machine != "x86_64"
+torch; sys_platform != "darwin" or platform_machine != "x86_64"
+torchvision; sys_platform != "darwin" or platform_machine != "x86_64"
+torchcodec; sys_platform != "darwin" or platform_machine != "x86_64"
+accelerate; sys_platform != "darwin" or platform_machine != "x86_64"
+librosa; sys_platform != "darwin" or platform_machine != "x86_64"
+soundfile; sys_platform != "darwin" or platform_machine != "x86_64"
